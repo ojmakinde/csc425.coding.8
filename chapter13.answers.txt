@@ -1,0 +1,27 @@
+2. The amount of memory that is free in my machine is 7938 mebibytes. These numbers do
+    not necessarily match my intuition, as I don't fully know how much memory is free
+    or used in the codespace, but it is very good to know.
+
+3. When I'm running the process and I run free, the amount of used memory increases over time.
+   Running free multiple times shows that the used is constantly increasing. This could be due
+   to the fact that I am constantly writing to the heap-allocated memory as I iterate over the
+   values.
+
+   
+                total        used        free      shared  buff/cache   available
+    Mem:        8129244     1867932      233596       63892     6027716     5874712
+    Swap:             0           0           0
+
+    after i kill, the new memory is freed.
+                total        used        free      shared  buff/cache   available
+    Mem:        8129244     1928072      172996       63892     6028176     5814572
+    Swap:             0           0           0
+
+    However, even when I wrote large amounts, it seems like the numbers self-regulated over time. Interesting.
+
+7. For my program, I see the heap, stack, text segment (which I believe is code), and I also see some space for the
+   C libraries, which is very interesting.
+
+8. The different values of memory I use means differing memory values for the [ anon ] value, which corresponds
+   to the amount of memory my dynamically allocated variables are using on the heap. Bigger size means more
+   memory use on the heap, and vice versa.
